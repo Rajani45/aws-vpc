@@ -30,11 +30,3 @@ resource "aws_internet_gateway" "main" {
     Name = "MainInternetGateway"
   }
 }
-
-
-
-# Associate Route Table with Subnet
-resource "aws_route_table_association" "main" {
-  subnet_id      = aws_subnet.main.id
-  route_table_id = aws_route_table.main.id
-}
